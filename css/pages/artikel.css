@@ -1,0 +1,112 @@
+/* ============================================================
+   ARTIKEL — ARTICLE GRID
+   ============================================================ */
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Article card */
+.article-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.article-card__img-wrap {
+  overflow: hidden;
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+}
+
+.article-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+  transform: scale(1);
+  transition: transform var(--t-slow);
+  background: var(--c-surface); /* placeholder while loading */
+}
+
+.article-card:hover .article-card__img {
+  transform: scale(1.03);
+}
+
+.article-card__tag {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: 0.625rem;
+}
+
+.article-card__title {
+  font-family: var(--f-heading);
+  font-size: clamp(1.125rem, 2vw, 1.4375rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--c-text);
+  margin-bottom: 0.625rem;
+  letter-spacing: -0.01em;
+  transition: color var(--t-fast);
+}
+.article-card:hover .article-card__title {
+  color: var(--c-accent);
+}
+
+.article-card__excerpt {
+  font-size: 0.875rem;
+  color: var(--c-muted);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.article-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.article-card__date {
+  font-size: 0.75rem;
+  color: var(--c-muted);
+  letter-spacing: 0.02em;
+}
+
+.article-card__read {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  transition: opacity var(--t-fast);
+  border-bottom: 1px solid rgba(196, 113, 74, 0.35);
+  padding-bottom: 1px;
+}
+.article-card:hover .article-card__read {
+  opacity: 0.7;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 960px) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+}

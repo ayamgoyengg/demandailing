@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Menu Demandailing Cafe — Makanan dan minuman pilihan dengan cita rasa premium dan harga bersahabat." />
+  <title>Menu — Demandailing Cafe</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/menu.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+       ====================================================== -->
+  <nav class="navbar is-scrolled" id="navbar" aria-label="Navigasi utama">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">Demandailing</a>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="navbar__menu" id="nav-menu">
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html"   class="navbar__link">Home</a></li>
+          <li><a href="menu.html"    class="navbar__link" aria-current="page">Menu</a></li>
+          <li><a href="kontak.html"  class="navbar__link">Kontak</a></li>
+          <li><a href="artikel.html" class="navbar__link">Artikel</a></li>
+          <li>
+            <a href="https://gofood.co.id/surabaya/restaurant/demandailing-cafe-jemursari-d4d94063-b3b0-4198-85f2-4512d21cfe6f"
+               class="navbar__link navbar__link--gofood"
+               target="_blank" rel="noopener noreferrer">GoFood ↗</a>
+          </li>
+        </ul>
+        <div class="navbar__social">
+          <a href="https://www.instagram.com/demandailingcafe/"
+             class="navbar__social-link"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=6282130202020"
+             class="navbar__social-link"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================
+       PAGE HEADER
+       ====================================================== -->
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">›</span>
+        <span aria-current="page">Menu</span>
+      </nav>
+      <h1 class="page-header__title fade-in">Menu Kami</h1>
+      <p class="page-header__subtitle fade-in">Makanan dan minuman pilihan — dibuat dengan bahan segar setiap harinya.</p>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       MENU CONTENT
+       ====================================================== -->
+  <main>
+    <div class="container">
+
+      <!-- Tab navigation -->
+      <div class="menu-tabs" role="tablist" aria-label="Kategori menu">
+        <div class="menu-tabs__list">
+          <button class="menu-tab is-active"
+                  role="tab"
+                  data-tab="makanan"
+                  aria-selected="true"
+                  aria-controls="panel-makanan"
+                  id="tab-makanan">Makanan</button>
+          <button class="menu-tab"
+                  role="tab"
+                  data-tab="minuman"
+                  aria-selected="false"
+                  aria-controls="panel-minuman"
+                  id="tab-minuman">Minuman</button>
+        </div>
+      </div>
+
+      <!-- MAKANAN panel -->
+      <div class="menu-panel"
+           id="panel-makanan"
+           data-panel="makanan"
+           role="tabpanel"
+           aria-labelledby="tab-makanan">
+
+        <!-- Makanan Berat -->
+        <div class="menu-category fade-in">
+          <h2 class="menu-category__title">Makanan Berat</h2>
+          <hr class="menu-category__rule" />
+          <ul class="menu-items-list">
+            <li class="menu-item">
+              <span class="menu-item__name">Chicken Mentai With Rice</span>
+              <span class="menu-item__price">Rp. 46.200</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Japanese Vegetable Curry with Chicken Katsu</span>
+              <span class="menu-item__price">Rp. 46.200</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Spaghetti Carbonara</span>
+              <span class="menu-item__price">Rp. 48.400</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Spaghetti Sambal Bawang Aglio Olio with Chicken Katsu</span>
+              <span class="menu-item__price">Rp. 56.100</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Teriyaki Beef Slices Special</span>
+              <span class="menu-item__price">Rp. 62.700</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Teriyaki Chicken Katsu Special</span>
+              <span class="menu-item__price">Rp. 50.600</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Camilan & Dessert -->
+        <div class="menu-category fade-in">
+          <h2 class="menu-category__title">Camilan &amp; Dessert</h2>
+          <hr class="menu-category__rule" />
+          <ul class="menu-items-list">
+            <li class="menu-item">
+              <span class="menu-item__name">Chips Mentai</span>
+              <span class="menu-item__price">Rp. 33.000</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Cookies n Cream Waffle</span>
+              <span class="menu-item__price">Rp. 51.700</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">French Fries 200</span>
+              <span class="menu-item__price">Rp. 36.200</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Pisang Goreng Coklat Keju</span>
+              <span class="menu-item__price">Rp. 42.900</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Pohong Goreng 250Gr</span>
+              <span class="menu-item__price">Rp. 37.400</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Potato Wedges</span>
+              <span class="menu-item__price">Rp. 46.200</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Silky Pudding Caramel</span>
+              <span class="menu-item__price">Rp. 19.800</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Silky Pudding Choco Lava</span>
+              <span class="menu-item__price">Rp. 26.400</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Silky Pudding Regal Dulce</span>
+              <span class="menu-item__price">Rp. 26.400</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Silky Pudding Strawberry Lychee</span>
+              <span class="menu-item__price">Rp. 26.400</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Single Millecrepes Choco Lava</span>
+              <span class="menu-item__price">Rp. 44.000</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Spicy Cheese Fries 200</span>
+              <span class="menu-item__price">Rp. 38.500</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- /MAKANAN panel -->
+
+      <!-- MINUMAN panel -->
+      <div class="menu-panel"
+           id="panel-minuman"
+           data-panel="minuman"
+           role="tabpanel"
+           aria-labelledby="tab-minuman"
+           hidden>
+
+        <div class="menu-category fade-in">
+          <h2 class="menu-category__title">Minuman</h2>
+          <hr class="menu-category__rule" />
+          <ul class="menu-items-list">
+            <li class="menu-item">
+              <span class="menu-item__name">Carrot Tomatoes Jus</span>
+              <span class="menu-item__price">Rp. 41.400</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Choco CnC Frappe</span>
+              <span class="menu-item__price">Rp. 38.500</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Dragon Fruit Banana</span>
+              <span class="menu-item__price">Rp. 41.800</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Hazelnut Pralin Frappe</span>
+              <span class="menu-item__price">Rp. 41.800</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Ice Kopi Gula Aren</span>
+              <span class="menu-item__price">Rp. 36.300</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Ice Regalatte</span>
+              <span class="menu-item__price">Rp. 48.400</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Kale and Lemon Yoghurt</span>
+              <span class="menu-item__price">Rp. 41.800</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Lemon Wasabi Soda</span>
+              <span class="menu-item__price">Rp. 29.700</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Mango Strawberry Smoothies</span>
+              <span class="menu-item__price">Rp. 41.800</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Mango Yoghurt</span>
+              <span class="menu-item__price">Rp. 38.500</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Milo Caramel Regal</span>
+              <span class="menu-item__price">Rp. 41.800</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Peach Yoghurt</span>
+              <span class="menu-item__price">Rp. 38.500</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Raspberry Cola</span>
+              <span class="menu-item__price">Rp. 31.900</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Raspberry Soda</span>
+              <span class="menu-item__price">Rp. 35.200</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Rujak Soda</span>
+              <span class="menu-item__price">Rp. 29.700</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Strawberry Lemon Frappe</span>
+              <span class="menu-item__price">Rp. 38.500</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Strawberry Wasabi Soda</span>
+              <span class="menu-item__price">Rp. 29.700</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Strawberry Yoghurt</span>
+              <span class="menu-item__price">Rp. 38.500</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- /MINUMAN panel -->
+
+    </div>
+  </main>
+
+  <!-- ======================================================
+       GOFOOD BANNER
+       ====================================================== -->
+  <section class="gofood-banner section--sm" aria-label="Pesan via GoFood">
+    <div class="container">
+      <div class="gofood-banner__inner fade-in">
+        <div>
+          <p class="gofood-banner__text">Mau pesan dari rumah?</p>
+          <p class="gofood-banner__sub">Tersedia di GoFood — cepat, mudah, langsung ke pintu kamu.</p>
+        </div>
+        <a href="https://gofood.co.id/surabaya/restaurant/demandailing-cafe-jemursari-d4d94063-b3b0-4198-85f2-4512d21cfe6f"
+           class="btn btn--dark"
+           target="_blank" rel="noopener noreferrer">Pesan via GoFood ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Demandailing</a>
+          <p class="footer__tagline">Cafe cozy di Surabaya</p>
+          <address class="footer__address">
+            Jl. Raya Jemursari No.71<br>
+            Jemur Wonosari, Kec. Wonocolo<br>
+            Surabaya, Jawa Timur 60237
+          </address>
+        </div>
+
+        <div>
+          <span class="footer__col-title">Halaman</span>
+          <ul class="footer__nav-links" role="list">
+            <li><a href="index.html"   class="footer__nav-link">Home</a></li>
+            <li><a href="menu.html"    class="footer__nav-link">Menu</a></li>
+            <li><a href="kontak.html"  class="footer__nav-link">Kontak</a></li>
+            <li><a href="artikel.html" class="footer__nav-link">Artikel</a></li>
+            <li>
+              <a href="https://gofood.co.id/surabaya/restaurant/demandailing-cafe-jemursari-d4d94063-b3b0-4198-85f2-4512d21cfe6f"
+                 class="footer__nav-link"
+                 target="_blank" rel="noopener noreferrer">GoFood ↗</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="footer__col-title">Temukan Kami</span>
+          <div class="footer__social-links">
+            <a href="https://www.instagram.com/demandailingcafe/"
+               class="footer__social-link"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=6282130202020"
+               class="footer__social-link"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=6282130202020"
+             class="btn btn--dark"
+             target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Demandailing Cafe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

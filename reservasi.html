@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reservasi meja di Demandailing Cafe — MERR, Klampis, Tidar, Jemursari. Pesan tempat duduk Anda sekarang." />
+  <title>Reservasi — Demandailing Cafe</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/reservasi.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+       ====================================================== -->
+  <nav class="navbar is-scrolled" id="navbar" aria-label="Navigasi utama">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">Demandailing</a>
+
+      <button class="navbar__hamburger" id="hamburger"
+              aria-label="Buka menu navigasi"
+              aria-expanded="false"
+              aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="navbar__menu" id="nav-menu">
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html"    class="navbar__link">Home</a></li>
+          <li><a href="menu.html"     class="navbar__link">Menu</a></li>
+          <li><a href="kontak.html"   class="navbar__link">Kontak</a></li>
+          <li><a href="artikel.html"  class="navbar__link">Artikel</a></li>
+          <li>
+            <a href="https://gofood.co.id/surabaya/restaurant/demandailing-cafe-jemursari-d4d94063-b3b0-4198-85f2-4512d21cfe6f"
+               class="navbar__link navbar__link--gofood"
+               target="_blank" rel="noopener noreferrer">GoFood ↗</a>
+          </li>
+        </ul>
+        <div class="navbar__social">
+          <a href="https://www.instagram.com/demandailingcafe/"
+             class="navbar__social-link"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=6282130202020"
+             class="navbar__social-link"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================
+       PAGE HEADER
+       ====================================================== -->
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">›</span>
+        <span aria-current="page">Reservasi</span>
+      </nav>
+      <h1 class="page-header__title fade-in">Reservasi<br><em>Meja</em></h1>
+      <p class="page-header__subtitle fade-in">Pesan tempat duduk Anda terlebih dahulu dan nikmati pengalaman ngopi tanpa khawatir kehabisan tempat.</p>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       RESERVATION SECTION
+       ====================================================== -->
+  <section class="reservasi-section">
+    <div class="container">
+      <div class="reservasi__inner">
+
+        <!-- Sidebar Info -->
+        <aside class="reservasi__info fade-in">
+          <span class="overline">Informasi</span>
+          <h2 class="reservasi__info-title">Sebelum Reservasi</h2>
+          <p class="reservasi__info-desc">
+            Reservasi meja membantu kami mempersiapkan pengalaman terbaik untuk Anda. Tim kami akan menghubungi Anda via WhatsApp untuk konfirmasi.
+          </p>
+
+          <div class="reservasi__info-items">
+
+            <div class="reservasi__info-item">
+              <div class="reservasi__info-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="reservasi__info-text">
+                <strong>Jam Operasional</strong>
+                <span>Senin – Sabtu: 11.00 – 21.00<br>*Minggu &amp; hari libur menyesuaikan</span>
+              </div>
+            </div>
+
+            <div class="reservasi__info-item">
+              <div class="reservasi__info-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="reservasi__info-text">
+                <strong>Kapasitas</strong>
+                <span>Maksimal 20 orang per reservasi.<br>Untuk acara lebih besar, hubungi kami langsung.</span>
+              </div>
+            </div>
+
+            <div class="reservasi__info-item">
+              <div class="reservasi__info-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div class="reservasi__info-text">
+                <strong>Batas Reservasi</strong>
+                <span>Reservasi minimal H-1 sebelum kunjungan.</span>
+              </div>
+            </div>
+
+            <div class="reservasi__info-item">
+              <div class="reservasi__info-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="reservasi__info-text">
+                <strong>Konfirmasi via WhatsApp</strong>
+                <span>Tim kami akan menghubungi Anda di nomor yang didaftarkan dalam 1×24 jam.</span>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- Form Card -->
+        <div class="reservasi__form-card fade-in">
+
+          <!-- Success state (hidden by default) -->
+          <div class="reservasi__success" id="reservasiSuccess" aria-live="polite" aria-hidden="true">
+            <div class="reservasi__success-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Reservasi Terkirim!</h3>
+            <p>Terima kasih telah melakukan reservasi. Tim kami akan segera menghubungi Anda via WhatsApp untuk konfirmasi dalam 1×24 jam.</p>
+            <a href="index.html" class="btn btn--dark">Kembali ke Home</a>
+          </div>
+
+          <!-- Form -->
+          <form id="reservasiForm" novalidate>
+
+            <span class="overline" style="margin-bottom:1.25rem;">Data Reservasi</span>
+
+            <div class="form-grid">
+
+              <!-- Nama -->
+              <div class="form-group">
+                <label class="form-label" for="nama">
+                  Nama Lengkap <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input class="form-control" type="text" id="nama" name="nama"
+                       placeholder="Nama Anda" required autocomplete="name" />
+              </div>
+
+              <!-- No. HP -->
+              <div class="form-group">
+                <label class="form-label" for="phone">
+                  Nomor WhatsApp <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input class="form-control" type="tel" id="phone" name="phone"
+                       placeholder="08xx-xxxx-xxxx" required autocomplete="tel" />
+              </div>
+
+              <!-- Tanggal -->
+              <div class="form-group">
+                <label class="form-label" for="tanggal">
+                  Tanggal Kunjungan <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input class="form-control" type="date" id="tanggal" name="tanggal" required />
+              </div>
+
+              <!-- Waktu -->
+              <div class="form-group">
+                <label class="form-label" for="waktu">
+                  Waktu Kedatangan <span class="required" aria-hidden="true">*</span>
+                </label>
+                <select class="form-control" id="waktu" name="waktu" required>
+                  <option value="" disabled selected>Pilih waktu</option>
+                  <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                </select>
+              </div>
+
+              <!-- Jumlah Tamu -->
+              <div class="form-group">
+                <label class="form-label" for="tamu">
+                  Jumlah Tamu <span class="required" aria-hidden="true">*</span>
+                </label>
+                <select class="form-control" id="tamu" name="tamu" required>
+                  <option value="" disabled selected>Pilih jumlah</option>
+                  <option value="1">1 orang</option>
+                  <option value="2">2 orang</option>
+                  <option value="3">3 orang</option>
+                  <option value="4">4 orang</option>
+                  <option value="5">5 orang</option>
+                  <option value="6">6 orang</option>
+                  <option value="7">7 orang</option>
+                  <option value="8">8 orang</option>
+                  <option value="9">9 orang</option>
+                  <option value="10">10 orang</option>
+                  <option value="11-15">11 – 15 orang</option>
+                  <option value="16-20">16 – 20 orang</option>
+                </select>
+              </div>
+
+              <!-- Email (opsional) -->
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span style="font-weight:400;color:var(--c-muted)">(opsional)</span></label>
+                <input class="form-control" type="email" id="email" name="email"
+                       placeholder="email@kamu.com" autocomplete="email" />
+              </div>
+
+              <!-- Pilih Cabang -->
+              <div class="form-group form-group--full">
+                <label class="form-label">
+                  Pilih Cabang <span class="required" aria-hidden="true">*</span>
+                </label>
+                <div class="branch-radios" role="group" aria-label="Pilih cabang">
+                  <input class="branch-radio" type="radio" id="cabang-merr"      name="cabang" value="MERR" required />
+                  <label class="branch-radio-label" for="cabang-merr">MERR</label>
+
+                  <input class="branch-radio" type="radio" id="cabang-klampis"   name="cabang" value="Klampis" />
+                  <label class="branch-radio-label" for="cabang-klampis">Klampis</label>
+
+                  <input class="branch-radio" type="radio" id="cabang-tidar"     name="cabang" value="Tidar" />
+                  <label class="branch-radio-label" for="cabang-tidar">Tidar</label>
+
+                  <input class="branch-radio" type="radio" id="cabang-jemursari" name="cabang" value="Jemursari" />
+                  <label class="branch-radio-label" for="cabang-jemursari">Jemursari</label>
+                </div>
+              </div>
+
+              <!-- Catatan -->
+              <div class="form-group form-group--full">
+                <label class="form-label" for="catatan">Catatan Khusus <span style="font-weight:400;color:var(--c-muted)">(opsional)</span></label>
+                <textarea class="form-control" id="catatan" name="catatan"
+                          placeholder="Contoh: ada yang ulang tahun, butuh kursi bayi, alergi makanan tertentu, dll."></textarea>
+              </div>
+
+            </div>
+
+            <div class="form-footer">
+              <p>Dengan mengirim form ini Anda menyetujui kami menghubungi Anda via WhatsApp untuk konfirmasi reservasi.</p>
+              <button type="submit" class="btn btn--accent">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Kirim Reservasi
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Demandailing</a>
+          <p class="footer__tagline">Cafe cozy di Surabaya</p>
+          <address class="footer__address">
+            Jl. Raya Jemursari No.71<br>
+            Jemur Wonosari, Kec. Wonocolo<br>
+            Surabaya, Jawa Timur 60237
+          </address>
+        </div>
+
+        <div>
+          <span class="footer__col-title">Halaman</span>
+          <ul class="footer__nav-links" role="list">
+            <li><a href="index.html"   class="footer__nav-link">Home</a></li>
+            <li><a href="menu.html"    class="footer__nav-link">Menu</a></li>
+            <li><a href="kontak.html"  class="footer__nav-link">Kontak</a></li>
+            <li><a href="artikel.html" class="footer__nav-link">Artikel</a></li>
+            <li>
+              <a href="https://gofood.co.id/surabaya/restaurant/demandailing-cafe-jemursari-d4d94063-b3b0-4198-85f2-4512d21cfe6f"
+                 class="footer__nav-link"
+                 target="_blank" rel="noopener noreferrer">GoFood ↗</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="footer__col-title">Temukan Kami</span>
+          <div class="footer__social-links">
+            <a href="https://www.instagram.com/demandailingcafe/"
+               class="footer__social-link"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=6282130202020"
+               class="footer__social-link"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=6282130202020"
+             class="btn btn--dark"
+             target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Demandailing Cafe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var form    = document.getElementById('reservasiForm');
+      var success = document.getElementById('reservasiSuccess');
+      if (!form || !success) return;
+
+      /* Set min date to tomorrow */
+      var tanggalInput = document.getElementById('tanggal');
+      if (tanggalInput) {
+        var tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        tanggalInput.min = tomorrow.toISOString().split('T')[0];
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        /* Validate cabang (radio not covered by :invalid natively in all browsers) */
+        var cabang = form.querySelector('input[name="cabang"]:checked');
+        if (!cabang) {
+          var firstRadio = form.querySelector('.branch-radio-label');
+          if (firstRadio) firstRadio.focus();
+          alert('Silakan pilih cabang terlebih dahulu.');
+          return;
+        }
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        /* Show success */
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.removeAttribute('aria-hidden');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    }());
+  </script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Demandailing Cafe — Cafe cozy di Surabaya. MERR · Klampis · Tidar · Jemursari. Menu lezat, suasana nyaman, harga bersahabat." />
+  <title>Demandailing Cafe — Cafe Cozy di Surabaya</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/home.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+       ====================================================== -->
+  <nav class="navbar" id="navbar" aria-label="Navigasi utama">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">Demandailing</a>
+
+      <button class="navbar__hamburger" id="hamburger"
+              aria-label="Buka menu navigasi"
+              aria-expanded="false"
+              aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="navbar__menu" id="nav-menu">
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html"   class="navbar__link" aria-current="page">Home</a></li>
+          <li><a href="menu.html"    class="navbar__link">Menu</a></li>
+          <li><a href="kontak.html"  class="navbar__link">Kontak</a></li>
+          <li><a href="artikel.html" class="navbar__link">Artikel</a></li>
+          <li>
+            <a href="https://gofood.co.id/surabaya/restaurant/demandailing-cafe-jemursari-d4d94063-b3b0-4198-85f2-4512d21cfe6f"
+               class="navbar__link navbar__link--gofood"
+               target="_blank" rel="noopener noreferrer">GoFood ↗</a>
+          </li>
+        </ul>
+        <div class="navbar__social">
+          <a href="https://www.instagram.com/demandailingcafe/"
+             class="navbar__social-link"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram Demandailing Cafe">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=6282130202020"
+             class="navbar__social-link"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="WhatsApp Demandailing Cafe">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================
+       HERO — split layout
+       ====================================================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+
+        <!-- Left: text -->
+        <div class="hero__content fade-in">
+          <span class="overline hero__overline">Specialty Coffee &amp; Food</span>
+          <h1 class="hero__headline">
+            Selamat Datang di<br>
+            <em>Demandailing</em><br>Cafe
+          </h1>
+          <p class="hero__subtext">
+            Ruang ketiga yang hangat, menu yang lezat, dan harga yang bersahabat — hadir di empat titik Surabaya.
+          </p>
+          <div class="hero__locations" aria-label="Lokasi cabang">
+            <span>MERR</span>
+            <span class="hero__locations-dot" aria-hidden="true"></span>
+            <span>Klampis</span>
+            <span class="hero__locations-dot" aria-hidden="true"></span>
+            <span>Tidar</span>
+            <span class="hero__locations-dot" aria-hidden="true"></span>
+            <span>Jemursari</span>
+          </div>
+          <div class="hero__ctas">
+            <a href="menu.html" class="btn btn--dark">Lihat Menu</a>
+            <a href="https://gofood.co.id/surabaya/restaurant/demandailing-cafe-jemursari-d4d94063-b3b0-4198-85f2-4512d21cfe6f"
+               class="btn btn--outline"
+               target="_blank" rel="noopener noreferrer">Pesan via GoFood</a>
+          </div>
+        </div>
+
+        <!-- Right: image -->
+        <div class="hero__img-wrap fade-in">
+          <img class="hero__img"
+               src="https://2.bp.blogspot.com/-ydsoKnoJuH0/VwueHv64b1I/AAAAAAAAI1w/SvAvoAquCMslgnLK-WnDJlUcS1cGFu6SA/s1600/demandailing%2Bsurabaya%2B2.jpg"
+               alt="Suasana hangat di Demandailing Cafe"
+               loading="eager"
+               width="480" height="680" />
+        </div>
+
+      </div>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span class="hero__scroll-line"></span>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FEATURED MENU — horizontal carousel
+       ====================================================== -->
+  <section class="section featured-menu" aria-labelledby="featured-title">
+    <div class="container">
+
+      <!-- Header: title + controls -->
+      <div class="featured-menu__header fade-in">
+        <div>
+          <span class="overline">Menu Pilihan</span>
+          <h2 class="featured-menu__title" id="featured-title">Yang Wajib Dicoba</h2>
+        </div>
+        <div class="featured-menu__header-right">
+          <a href="menu.html" class="featured-menu__view-all">Lihat Semua &rarr;</a>
+          <div class="featured-menu__nav" role="group" aria-label="Navigasi carousel">
+            <button class="featured-menu__btn" id="menuPrev" aria-label="Sebelumnya" disabled>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="featured-menu__btn" id="menuNext" aria-label="Selanjutnya">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll track -->
+      <div class="featured-menu__track-wrap">
+        <div class="featured-menu__track" id="menuTrack" role="list">
+
+          <article class="menu-card" role="listitem">
+            <div class="menu-card__img-wrap">
+              <img class="menu-card__img"
+                   src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&h=400&q=80"
+                   alt="Chicken Mentai With Rice"
+                   loading="lazy" width="600" height="400" />
+            </div>
+            <h3 class="menu-card__name">Chicken Mentai With Rice</h3>
+            <p class="menu-card__price">Rp. 46.200</p>
+          </article>
+
+          <article class="menu-card" role="listitem">
+            <div class="menu-card__img-wrap">
+              <img class="menu-card__img"
+                   src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&h=400&q=80"
+                   alt="Cookies n Cream Waffle"
+                   loading="lazy" width="600" height="400" />
+            </div>
+            <h3 class="menu-card__name">Cookies n Cream Waffle</h3>
+            <p class="menu-card__price">Rp. 51.700</p>
+          </article>
+
+          <article class="menu-card" role="listitem">
+            <div class="menu-card__img-wrap">
+              <img class="menu-card__img"
+                   src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&h=400&q=80"
+                   alt="Teriyaki Beef Slices Special"
+                   loading="lazy" width="600" height="400" />
+            </div>
+            <h3 class="menu-card__name">Teriyaki Beef Slices Special</h3>
+            <p class="menu-card__price">Rp. 62.700</p>
+          </article>
+
+          <article class="menu-card" role="listitem">
+            <div class="menu-card__img-wrap">
+              <img class="menu-card__img"
+                   src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&h=400&q=80"
+                   alt="Carrot Tomatoes Jus"
+                   loading="lazy" width="600" height="400" />
+            </div>
+            <h3 class="menu-card__name">Carrot Tomatoes Jus</h3>
+            <p class="menu-card__price">Rp. 41.400</p>
+          </article>
+
+          <article class="menu-card" role="listitem">
+            <div class="menu-card__img-wrap">
+              <img class="menu-card__img"
+                   src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=600&h=400&q=80"
+                   alt="Kale and Lemon Yoghurt"
+                   loading="lazy" width="600" height="400" />
+            </div>
+            <h3 class="menu-card__name">Kale and Lemon Yoghurt</h3>
+            <p class="menu-card__price">Rp. 41.800</p>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Scroll progress -->
+      <div class="featured-menu__progress" aria-hidden="true">
+        <div class="featured-menu__progress-fill" id="menuProgress"></div>
+      </div>
+
+      <div class="featured-menu__cta fade-in">
+        <a href="menu.html" class="btn btn--dark">Lihat Semua Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       BRAND STATEMENT
+       ====================================================== -->
+  <section class="section brand-statement" aria-labelledby="brand-heading">
+    <div class="container">
+      <div class="brand-statement__inner">
+        <div class="fade-in">
+          <blockquote class="brand-statement__quote" id="brand-heading">
+            "Tempat nongkrong yang nyaman, menu yang lezat, harga yang bersahabat."
+          </blockquote>
+        </div>
+        <div class="brand-statement__text-wrap fade-in">
+          <span class="overline">Tentang Kami</span>
+          <p class="brand-statement__text">
+            Demandailing Cafe hadir sebagai ruang ketiga yang hangat di tengah kota Surabaya. Kami percaya bahwa makanan dan minuman yang lezat seharusnya bisa dinikmati semua orang, dalam suasana yang nyaman dan membuat betah berlama-lama.
+          </p>
+          <p class="brand-statement__text">
+            Dengan empat cabang di lokasi strategis — MERR, Klampis, Tidar, dan Jemursari — Demandailing hadir lebih dekat ke kamu, membawa pengalaman ngopi autentik dan menu variatif yang selalu bikin ingin kembali.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       VISIT TEASER
+       ====================================================== -->
+  <section class="section visit-teaser" aria-labelledby="visit-title">
+    <div class="container">
+      <div class="visit-teaser__inner">
+        <div class="fade-in">
+          <span class="overline visit-teaser__overline">Jam Operasional</span>
+          <p class="visit-teaser__hours" id="visit-title">Senin – Sabtu<br>11.00 – 21.00</p>
+          <p class="visit-teaser__hours-sub">*Minggu &amp; hari libur menyesuaikan</p>
+          <div class="visit-teaser__branches" role="list" aria-label="Cabang Demandailing">
+            <span class="branch-chip" role="listitem">MERR</span>
+            <span class="branch-chip" role="listitem">Klampis</span>
+            <span class="branch-chip" role="listitem">Tidar</span>
+            <span class="branch-chip" role="listitem">Jemursari</span>
+          </div>
+          <a href="kontak.html" class="btn btn--dark">Lihat Lokasi &amp; Kontak &rarr;</a>
+        </div>
+        <div class="visit-teaser__visual fade-in" aria-hidden="true">
+          <div class="visit-teaser__circle">
+            <p class="visit-teaser__circle-text">Hadir untuk<br>kamu setiap hari</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Demandailing</a>
+          <p class="footer__tagline">Cafe cozy di Surabaya</p>
+          <address class="footer__address">
+            Jl. Raya Jemursari No.71<br>
+            Jemur Wonosari, Kec. Wonocolo<br>
+            Surabaya, Jawa Timur 60237
+          </address>
+        </div>
+
+        <div>
+          <span class="footer__col-title">Halaman</span>
+          <ul class="footer__nav-links" role="list">
+            <li><a href="index.html"   class="footer__nav-link">Home</a></li>
+            <li><a href="menu.html"    class="footer__nav-link">Menu</a></li>
+            <li><a href="kontak.html"  class="footer__nav-link">Kontak</a></li>
+            <li><a href="artikel.html" class="footer__nav-link">Artikel</a></li>
+            <li>
+              <a href="https://gofood.co.id/surabaya/restaurant/demandailing-cafe-jemursari-d4d94063-b3b0-4198-85f2-4512d21cfe6f"
+                 class="footer__nav-link"
+                 target="_blank" rel="noopener noreferrer">GoFood ↗</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="footer__col-title">Temukan Kami</span>
+          <div class="footer__social-links">
+            <a href="https://www.instagram.com/demandailingcafe/"
+               class="footer__social-link"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=6282130202020"
+               class="footer__social-link"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=6282130202020"
+             class="btn btn--dark"
+             target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Demandailing Cafe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Reservation Button -->
+  <a href="reservasi.html" class="fab-reservation" aria-label="Buat Reservasi">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span class="fab-reservation__label">Reservasi</span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
