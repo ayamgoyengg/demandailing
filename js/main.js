@@ -61,7 +61,7 @@
 
 /* ============================================================
    FEATURED MENU CAROUSEL
-   — auto-scroll when in view, drag, prev/next, progress bar
+   — auto-scroll per 3 detik, drag, prev/next, progress bar
    ============================================================ */
 
 (function () {
@@ -71,8 +71,34 @@
   var btnPrev      = document.getElementById('menuPrev');
   var btnNext      = document.getElementById('menuNext');
   var progressFill = document.getElementById('menuProgress');
-  var cards        = track.querySelectorAll('.menu-card');
+  var cards        = Array.prototype.slice.call(track.querySelectorAll('.menu-card'));
   if (!cards.length) return;
+
+  var currentIdx  = 0;
+  var intervalId  = null;
+  var resumeTimer = null;
+
+  /* ── scroll ke index tertentu ── */
+  function scrollToIdx(idx) {
+    currentIdx = Math.max(0, Math.min(idx, cards.length - 1));
+    var gap = parseFloat(getComputedStyle(track).gap) || 16;
+    var target = cards[currentIdx].offsetLeft - parseFloat(getComputedStyle(track).paddingLeft || 0);
+    track.scrollTo({ left: target, behavior: 'smooth' });
+  }
+
+  /* ── prev / next ── */
+  if (btnPrev) {
+    btnPrev.addEventListener('click', function () {
+      pauseAuto(4000);
+      scrollToIdx(currentIdx - 1);
+    });
+  }
+  if (btnNext) {
+    btnNext.addEventListener('click', function () {
+      pauseAuto(4000);
+      scrollToIdx(currentIdx + 1);
+    });
+  }
 
   /* ── drag to scroll (desktop) ── */
   var isDragging = false;
@@ -84,17 +110,14 @@
     dragStartX = e.pageX;
     dragStart  = track.scrollLeft;
     track.classList.add('is-dragging');
-    pauseAuto(4000); // resume after 4s
+    pauseAuto(4000);
   });
 
   document.addEventListener('mouseup', function () {
     if (!isDragging) return;
     isDragging = false;
     track.classList.remove('is-dragging');
-  });
-
-  track.addEventListener('mouseleave', function () {
-    if (isDragging) { isDragging = false; track.classList.remove('is-dragging'); }
+    syncIdxFromScroll();
   });
 
   track.addEventListener('mousemove', function (e) {
@@ -107,33 +130,20 @@
     if (Math.abs(track.scrollLeft - dragStart) > 4) e.preventDefault();
   }, true);
 
-  /* ── step size ── */
-  function stepWidth() {
-    var gap = parseFloat(getComputedStyle(track).gap) || 20;
-    return cards[0].offsetWidth + gap;
-  }
-
-  /* ── prev / next ── */
-  if (btnPrev) {
-    btnPrev.addEventListener('click', function () {
-      pauseAuto(4000);
-      track.scrollBy({ left: -stepWidth(), behavior: 'smooth' });
-    });
-  }
-  if (btnNext) {
-    btnNext.addEventListener('click', function () {
-      pauseAuto(4000);
-      track.scrollBy({ left: stepWidth(), behavior: 'smooth' });
-    });
-  }
-
-  /* ── pause on hover ── */
-  track.addEventListener('mouseenter', function () { pauseAuto(0); });
-  track.addEventListener('mouseleave', function () { if (!isDragging) resumeAuto(); });
-
-  /* ── pause on touch ── */
+  /* ── touch ── */
   track.addEventListener('touchstart', function () { pauseAuto(0); }, { passive: true });
-  track.addEventListener('touchend',   function () { pauseAuto(2500); }, { passive: true });
+  track.addEventListener('touchend',   function () {
+    syncIdxFromScroll();
+    pauseAuto(3000);
+  }, { passive: true });
+
+  /* ── sync currentIdx dari posisi scroll ── */
+  function syncIdxFromScroll() {
+    var gap = parseFloat(getComputedStyle(track).gap) || 16;
+    var step = cards[0].offsetWidth + gap;
+    currentIdx = Math.round(track.scrollLeft / step);
+    currentIdx = Math.max(0, Math.min(currentIdx, cards.length - 1));
+  }
 
   /* ── progress bar + button states ── */
   function updateUI() {
@@ -149,73 +159,44 @@
 
   track.addEventListener('scroll', updateUI, { passive: true });
 
-  /* ── AUTO-SCROLL (rAF loop) ── */
-  var rafId      = null;
-  var autoOn     = false;   // section is in viewport
-  var paused     = false;   // user is interacting
-  var resumeTimer = null;
-  var SPEED      = 0.75;    // px per frame (~45px/s at 60fps)
-
-  function tick() {
-    if (!paused) {
-      var max = track.scrollWidth - track.clientWidth;
-      if (max <= 0) { rafId = null; return; }
-
-      if (track.scrollLeft >= max - 1) {
-        /* reached end → pause briefly, then snap back to start */
-        paused = true;
-        setTimeout(function () {
-          track.scrollTo({ left: 0, behavior: 'smooth' });
-          setTimeout(function () { paused = false; }, 700);
-        }, 900);
-      } else {
-        track.scrollLeft += SPEED;
-      }
-    }
-    if (autoOn) rafId = requestAnimationFrame(tick);
+  /* ── AUTO-SCROLL setiap 3 detik ── */
+  function autoStep() {
+    var nextIdx = currentIdx + 1 >= cards.length ? 0 : currentIdx + 1;
+    scrollToIdx(nextIdx);
   }
 
   function startAuto() {
-    if (autoOn) return;
-    autoOn = true;
-    paused = false;
-    rafId  = requestAnimationFrame(tick);
+    if (intervalId) return;
+    intervalId = setInterval(autoStep, 3000);
   }
 
   function stopAuto() {
-    autoOn = false;
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    clearInterval(intervalId);
+    intervalId = null;
   }
 
   function pauseAuto(resumeAfterMs) {
-    paused = true;
+    stopAuto();
     clearTimeout(resumeTimer);
     if (resumeAfterMs > 0) {
-      resumeTimer = setTimeout(resumeAuto, resumeAfterMs);
+      resumeTimer = setTimeout(startAuto, resumeAfterMs);
     }
   }
 
-  function resumeAuto() {
-    clearTimeout(resumeTimer);
-    paused = false;
-  }
-
-  /* ── start / stop with IntersectionObserver ── */
+  /* ── start/stop saat section masuk/keluar viewport ── */
   var section = track.closest('.featured-menu');
   if (section && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          startAuto();
-        } else {
-          stopAuto();
-        }
-      });
-    }, { threshold: 0.25 });
-    io.observe(section);
+    new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        startAuto();
+      } else {
+        stopAuto();
+      }
+    }, { threshold: 0.2 }).observe(section);
+  } else {
+    startAuto();
   }
 
-  /* init UI */
   window.addEventListener('load', updateUI);
   setTimeout(updateUI, 150);
 }());

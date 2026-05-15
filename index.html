@@ -58,54 +58,63 @@
   </nav>
 
   <!-- ======================================================
-       HERO — split layout
+       HERO — full-bleed cinematic
        ====================================================== -->
   <section class="hero">
-    <div class="container">
-      <div class="hero__inner">
 
-        <!-- Left: text -->
-        <div class="hero__content fade-in">
-          <span class="overline hero__overline">Specialty Coffee &amp; Food</span>
-          <h1 class="hero__headline">
-            Selamat Datang di<br>
-            <em>Demandailing</em><br>Cafe
-          </h1>
-          <p class="hero__subtext">
-            Ruang ketiga yang hangat, menu yang lezat, dan harga yang bersahabat — hadir di empat titik Surabaya.
-          </p>
-          <div class="hero__locations" aria-label="Lokasi cabang">
-            <span>MERR</span>
-            <span class="hero__locations-dot" aria-hidden="true"></span>
-            <span>Klampis</span>
-            <span class="hero__locations-dot" aria-hidden="true"></span>
-            <span>Tidar</span>
-            <span class="hero__locations-dot" aria-hidden="true"></span>
-            <span>Jemursari</span>
-          </div>
-          <div class="hero__ctas">
-            <a href="menu.html" class="btn btn--dark">Lihat Menu</a>
-            <a href="https://gofood.co.id/surabaya/restaurant/demandailing-cafe-jemursari-d4d94063-b3b0-4198-85f2-4512d21cfe6f"
-               class="btn btn--outline"
-               target="_blank" rel="noopener noreferrer">Pesan via GoFood</a>
-          </div>
+    <!-- Background image -->
+    <div class="hero__bg" aria-hidden="true">
+      <img class="hero__bg-img"
+           src="https://2.bp.blogspot.com/-ydsoKnoJuH0/VwueHv64b1I/AAAAAAAAI1w/SvAvoAquCMslgnLK-WnDJlUcS1cGFu6SA/s1600/demandailing%2Bsurabaya%2B2.jpg"
+           alt=""
+           loading="eager"
+           fetchpriority="high"
+           width="1600" height="900" />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container hero__container">
+      <div class="hero__content">
+
+        <div class="hero__eyebrow fade-in">
+          <span class="hero__tag">Specialty Coffee &amp; Food</span>
+          <span class="hero__tag-line" aria-hidden="true"></span>
+          <span class="hero__tag-sub">Surabaya</span>
         </div>
 
-        <!-- Right: image -->
-        <div class="hero__img-wrap fade-in">
-          <img class="hero__img"
-               src="https://2.bp.blogspot.com/-ydsoKnoJuH0/VwueHv64b1I/AAAAAAAAI1w/SvAvoAquCMslgnLK-WnDJlUcS1cGFu6SA/s1600/demandailing%2Bsurabaya%2B2.jpg"
-               alt="Suasana hangat di Demandailing Cafe"
-               loading="eager"
-               width="480" height="680" />
+        <h1 class="hero__headline fade-in">
+          Ruang Ketiga<br>yang <em>Hangat</em>
+        </h1>
+
+        <p class="hero__subtext fade-in">
+          Menu lezat, suasana nyaman, harga bersahabat — hadir di empat titik Surabaya.
+        </p>
+
+        <div class="hero__ctas fade-in">
+          <a href="menu.html" class="btn btn--hero-primary">Lihat Menu</a>
+          <a href="reservasi.html" class="btn btn--hero-ghost">Buat Reservasi</a>
         </div>
 
       </div>
+
+      <!-- Branch strip -->
+      <div class="hero__branches fade-in" aria-label="Lokasi cabang">
+        <span class="hero__branch">MERR</span>
+        <span class="hero__branch-sep" aria-hidden="true"></span>
+        <span class="hero__branch">Klampis</span>
+        <span class="hero__branch-sep" aria-hidden="true"></span>
+        <span class="hero__branch">Tidar</span>
+        <span class="hero__branch-sep" aria-hidden="true"></span>
+        <span class="hero__branch">Jemursari</span>
+      </div>
     </div>
-    <div class="hero__scroll-hint" aria-hidden="true">
-      <span class="hero__scroll-line"></span>
-      <span>Scroll</span>
+
+    <!-- Scroll hint -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-dot"></span>
     </div>
+
   </section>
 
   <!-- ======================================================
